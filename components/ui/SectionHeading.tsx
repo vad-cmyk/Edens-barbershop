@@ -19,7 +19,7 @@ export default function SectionHeading({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+      transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
     >
       <span
         className={`block h-px w-8 ${light ? "bg-bone/40" : "bg-near-black/30"}`}

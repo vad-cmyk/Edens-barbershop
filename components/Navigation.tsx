@@ -55,7 +55,7 @@ export default function Navigation() {
         }`}
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 1.9 }}
+        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay: 1.9 }}
       >
         <nav className="max-w-7xl mx-auto px-6 lg:px-12 h-16 lg:h-20 flex items-center justify-between">
           <a
@@ -130,7 +130,7 @@ export default function Navigation() {
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
             role="dialog"
             aria-modal="true"
             aria-label="Navigation menu"
@@ -164,7 +164,7 @@ export default function Navigation() {
                   transition={{
                     delay: 0.12 + i * 0.065,
                     duration: 0.5,
-                    ease: [0.25, 0.46, 0.45, 0.94],
+                    ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
                   }}
                 >
                   {link.label}

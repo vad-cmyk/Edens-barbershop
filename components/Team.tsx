@@ -18,7 +18,7 @@ export default function Team() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
           >
             The people behind the work.
           </motion.h2>
@@ -53,7 +53,7 @@ function TeamCard({ member }: { member: (typeof team)[0] }) {
         show: {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+          transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
         },
       }}
       className="group relative flex flex-col"

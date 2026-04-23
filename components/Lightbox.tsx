@@ -85,7 +85,7 @@ export default function Lightbox({
           className="relative max-w-5xl max-h-[85vh] w-full h-full flex items-center justify-center px-16 lg:px-20"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="relative w-full h-full">

@@ -71,7 +71,7 @@ export default function CustomCursor() {
           y: isHoveringCTA ? -40 : isHoveringLink ? -10 : -6,
           backgroundColor: isHoveringCTA ? "#0a0a0a" : isHoveringLink ? "rgba(10,10,10,0.4)" : "#0a0a0a",
         }}
-        transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
+        transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
         style={{ opacity: visible ? 1 : 0 }}
       >
         <motion.span

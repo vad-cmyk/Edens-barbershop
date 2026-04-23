@@ -32,7 +32,7 @@ export default function LoadingScreen() {
         <motion.div
           className="fixed inset-0 z-[9998] bg-near-black flex flex-col items-center justify-center"
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
         >
           <motion.div
             initial={{ opacity: 0, y: 8 }}
@@ -59,7 +59,7 @@ export default function LoadingScreen() {
               className="h-full bg-bone"
               initial={{ scaleX: 0, originX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ duration: 0.9, delay: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.9, delay: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
             />
           </motion.div>
         </motion.div>

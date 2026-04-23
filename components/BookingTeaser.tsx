@@ -28,7 +28,7 @@ export default function BookingTeaser() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
             >
               Choose your specialist.
             </motion.h2>
@@ -63,7 +63,7 @@ export default function BookingTeaser() {
                     y: 0,
                     transition: {
                       duration: 0.8,
-                      ease: [0.25, 0.46, 0.45, 0.94],
+                      ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
                     },
                   },
                 }}
@@ -115,7 +115,7 @@ export default function BookingTeaser() {
               initial={{ opacity: 0, y: 32, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 16, scale: 0.98 }}
-              transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
               onClick={(e) => e.stopPropagation()}
             >
               <button

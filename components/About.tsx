@@ -49,7 +49,7 @@ const fadeUp = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
   },
 };
 
@@ -76,7 +76,7 @@ export default function About() {
               animate={{
                 clipPath: imageInView ? "inset(0 0 0 0)" : "inset(0 0 100% 0)",
               }}
-              transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             >
               <Image
                 src="/images/504562859_18047550272575605_199543636622676739_n.jpg"
@@ -167,7 +167,7 @@ export default function About() {
                   transition={{
                     duration: 0.7,
                     delay: 0.2 + i * 0.1,
-                    ease: [0.25, 0.46, 0.45, 0.94],
+                    ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
                   }}
                 >
                   <p className="font-display font-light text-4xl lg:text-5xl leading-none text-near-black">
