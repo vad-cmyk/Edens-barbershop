@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors */
+  --color-bone: #fafaf7;
+  --color-near-black: #0a0a0a;
+  --color-warm-grey: #6b6b6b;
+  --color-charcoal: #1a1a1a;
+  --color-gold: #c9a961;
+  --color-gold-muted: rgba(201, 169, 97, 0.15);
+
+  /* Typography */
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-archivo), "Archivo", system-ui, sans-serif;
+
+  /* Custom easing tokens */
+  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ─── Base ─────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fafaf7;
+  color: #0a0a0a;
+  font-family: var(--font-archivo), "Archivo", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Selection ─────────────────────────────────────── */
+::selection {
+  background-color: #0a0a0a;
+  color: #fafaf7;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #fafaf7;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+}
+
+/* ─── Focus visible ─────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #c9a961;
+  outline-offset: 3px;
+}
+
+/* ─── Custom cursor ─────────────────────────────────── */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* ─── Animations ─────────────────────────────────────── */
+@keyframes line-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.4;
+  }
+}
+
+/* ─── Noise texture overlay ──────────────────────────── */
+.noise-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
